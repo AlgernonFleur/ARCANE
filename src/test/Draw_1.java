@@ -17,23 +17,24 @@ public class Draw_1 implements Drawing {
 	
 	@Override
 	public void draw(Graphics2D g, int width, int height) {
-		g.rotate(Math.toRadians(counters.get(0).getVal()),width/2,height/2);
+		Counter c1 = counters.get(1);
+		g.rotate(Math.toRadians(c1.getVal()),width/2,height/2);
 		new Circle(200,Color.cyan).
 				draw(g,width/2,height/2);
 		new TextCircle(205,"leviathan").
 				draw(g,width/2,height/2);
 		new Circle(225,Color.cyan).
 				draw(g,width/2,height/2);
-		g.rotate(Math.toRadians(-counters.get(0).getVal()),width/2,height/2);
+		g.rotate(Math.toRadians(-c1.getVal()),width/2,height/2);
 		
-		g.rotate(Math.toRadians(-counters.get(0).getVal()),width/2,height/2);
+		g.rotate(Math.toRadians(-c1.getVal()),width/2,height/2);
 		new Circle(170,Color.red).
 				draw(g,width/2,height/2);
 		new TextCircle(175,"ragnarok").
 				draw(g,width/2,height/2);
 		new Circle(200,Color.red).
 				draw(g,width/2,height/2);
-		g.rotate(Math.toRadians(counters.get(0).getVal()),width/2,height/2);
+		g.rotate(Math.toRadians(c1.getVal()),width/2,height/2);
 	}
 	
 	public static void main(String[] args) {
