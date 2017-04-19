@@ -1,6 +1,7 @@
 package gui;
 
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class Incantation extends JFrame {
 	MagicCircle circle;
@@ -19,8 +20,8 @@ public class Incantation extends JFrame {
 		return this;
 	}
 	
-	public Incantation setTimer(int delay,Counter counter){
-		this.circle.initTimer(delay,counter);
+	public Incantation setTimer(int delay, ArrayList<Counter> counters){
+		this.circle.initTimer(delay,counters);
 		return this;
 	}
 }

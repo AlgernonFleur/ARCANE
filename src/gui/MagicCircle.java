@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class MagicCircle extends JPanel{
 	private Drawing circle;
@@ -17,11 +18,11 @@ public class MagicCircle extends JPanel{
 		setBackground(Color.black);
 	}
 	
-	public void initTimer(int delay, Counter counter){
+	public void initTimer(int delay,ArrayList<Counter> counters){
 		new Timer(delay, new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				counter.incVal();
+				for(Counter c:counters)c.incVal();
 				repaint();
 			}
 		}).start();
